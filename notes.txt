@@ -1,46 +1,66 @@
 import matplotlib.pyplot as pylot = using matplotlib on pyplot
 
+---------- PLOT GRAPH ----------
 
-pylot.plot(x, y) = create graph line with [x = bottom, y = left]
+pylot.plot(x, y) = create chart line with [x = bottom, y = left]
 
 pylot.plot(list, marker="o") = add symbol "o" on each data
 pylot.plot(list, marker="x") = add symbol "x" on each data
 
-pylot.plot(list, linestyle="dotted") = styling dotted line in graph
-pylot.plot(list, linestyle="dashed") = styling dashed line in graph
-pylot.plot(list, ls="dashed") = styling dashed line in graph - shorted
+pylot,plot(list, markersize=12) = size marker to 12
+pylot,plot(list, markeredgecolor='red) = color marker to red
 
-pylot.plot(list, color="red") = styling red color on line in graph
+pylot.plot(list, linestyle="dotted") = styling dotted line in chart
+pylot.plot(list, linestyle="dashed") = styling dashed line in chart
+pylot.plot(list, ls="dashed") = styling dashed line in chart - shorted
 
-pylot.plot(list, linewidth="5") = styling width line in graph
+pylot.plot(list, color="red") = styling red color on line in chart
 
-pylot.plot(list) = 2 line in single graph
-pylot.plot(list) = 2 line in single graph
+pylot.plot(list, linewidth="5") = styling width line in chart
 
-pylot.title("string") = title top in graph
-pylot.xlabel("string") = bottom text in graph
-pylot.ylabel("string") = left text in graph
+pylot.xticks(list) = setup new number in bottom
+pylot.yticks(list) = setup new number in left
 
-pylot.title("string", fontdict=style, loc="left, center, right") = style title graph
+pylot.plot(list) = 2 line in single chart
+pylot.plot(list) = 2 line in single chart
 
-pylot.grid() = add background grid in graph
+pylot.title("string") = title top in chart
+pylot.xlabel("string") = bottom text in chart
+pylot.ylabel("string") = left text in chart
+
+pylot.title("string", fontdict=style, loc="left, center, right") = style title chart
+
+pylot.plot(list, list)
+pylot.subplot(2, 1, 1) = positioning 2 chart in single chart
+pylot.plot(list, list)
+pylot.subplot(2, 1, 1) = positioning 2 chart in single chart
+
+pylot.grid() = add background grid in chart
 pylot.grid(axis='x | y') = grid column or row
 
-pylot.plot(list, list)
-pylot.subplot(2, 1, 1) = positioning 2 graph in single graph
-pylot.plot(list, list)
-pylot.subplot(2, 1, 1) = positioning 2 graph in single graph
+pylot.figure(figsize=(x, x)) = sizing chart (width, height)
+pylot.figure(dpi=300) = sizing chart
+pylot.savefig('directory_path', dpi=100) = save image chart
 
 pylot.scatter(list, list) = make a line to dot
 
-pylot.bar(list, list) = create graph bar
+---------- BAR GRAPH ----------
 
-pylot.barh(list, list) = create graph bar with transpose() method
+bars =pylot.bar(list, list) = create chart bar
+bars[0].set_hatch('*') = styling first bar with '*'
+
+---------- BARH GRAPH ----------
+
+pylot.barh(list, list) = create chart bar with transpose() method
+
+---------- HIST GRAPH ----------
 
 pylot.hist(list) = ???
 
-pylot.pie(list) = create graph pie with 100% calculation
+---------- PIE GRAPH ----------
+
+pylot.pie(list) = create chart pie with 100% calculation
 pylot.pie(list, labels=[text]) = each list labels text
-pylot.pie(list, startangle=50) = positioning pie graph
+pylot.pie(list, startangle=50) = positioning pie chart
 pylot.pie(list, explode=[positioning...]) = positioning each data in pie
 pylot.legend(title="") = add title list data
