@@ -63,4 +63,10 @@ pylot.pie(list) = create chart pie with 100% calculation
 pylot.pie(list, labels=[text]) = each list labels text
 pylot.pie(list, startangle=50) = positioning pie chart
 pylot.pie(list, explode=[positioning...]) = positioning each data in pie
+pylot.pie(list, autopct='%.2f) = count percentage % each list
+pylot.pie(list, pctdistance=1) = positioning label
 pylot.legend(title="") = add title list data
+
+---------- CANDLE GRAPH ----------
+
+pylot.boxplot(list)
