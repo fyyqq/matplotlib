@@ -55,7 +55,9 @@ pylot.barh(list, list) = create chart bar with transpose() method
 
 ---------- HIST GRAPH ----------
 
-pylot.hist(list) = ???
+pylot.hist(list) = create histogram bar chart
+pylot.hist(list, bins=) = how many bar chart
+pylot.hist(list, cumulative=True) = 
 
 ---------- PIE GRAPH ----------
 
