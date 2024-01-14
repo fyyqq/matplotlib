@@ -1,6 +1,6 @@
 import matplotlib.pyplot as pylot = using matplotlib on pyplot
 
----------- PLOT GRAPH ----------
+---------- PLOT PLOT ----------
 
 pylot.plot(x, y) = create chart line with [x = bottom, y = left]
 
@@ -28,36 +28,61 @@ pylot.title("string") = title top in chart
 pylot.xlabel("string") = bottom text in chart
 pylot.ylabel("string") = left text in chart
 
+# Object Oriented Programming Only
+pylot.set_xlabel("string") = bottom text in chart
+pylot.set_ylabel("string") = left text in chart
+
 pylot.title("string", fontdict=style, loc="left, center, right") = style title chart
 
 pylot.plot(list, list)
 pylot.subplot(2, 1, 1) = positioning 2 chart in single chart
 pylot.plot(list, list)
 pylot.subplot(2, 1, 1) = positioning 2 chart in single chart
+fig, axes = pylot.subplots(row, column) # create multiple chart follow (row, column) / fig = whiteboard | axes = each chart
+
+fig.suptitle(title) = create title for subplots
+axes.set(xlabel, ylabel, title) = setup title, label, ...
+axes.grid() = style grid chart
+ax.axvline(mean, median, ...) = create line of mean, median in chart
 
 pylot.grid() = add background grid in chart
 pylot.grid(axis='x | y') = grid column or row
+pylot.grid(linestyle="--") = -- grid style
+pylot.grid(linewidth="2") = -- grid size
 
 pylot.figure(figsize=(x, x)) = sizing chart (width, height)
+pylot.figure(dpi=number) = sizing chart (inches)
 pylot.figure(dpi=300) = sizing chart
 pylot.savefig('directory_path', dpi=100) = save image chart
 
+fig = pylot.figure()
+pylot.xlim((0, 4)) = set axes x length
+pylot.ylim((0, 6)) = set axes y length
+
+fig = pylot.figure()
+fig.add_axes([left, bottom, width, height])
+
 pylot.scatter(list, list) = make a line to dot
 
----------- BAR GRAPH ----------
+pylot.tight_layout() = give space between two chart
+
+---------- BAR PLOT ----------
 
 bars =pylot.bar(list, list) = create chart bar
 bars[0].set_hatch('*') = styling first bar with '*'
 
----------- BARH GRAPH ----------
+---------- BARH PLOT ----------
 
 pylot.barh(list, list) = create chart bar with transpose() method
 
----------- HIST GRAPH ----------
+---------- HIST PLOT ----------
 
-pylot.hist(list) = ???
+pylot.hist(list) = histogram chart
+pylot.hist(list, bins=5) = 5 hist 
+pylot.hist(list, facecolor='red') = hist color 
+pylot.hist(list, alpha=0.5) = hist opacity 
 
----------- PIE GRAPH ----------
+---------- PIE PLOT ----------
 
 pylot.pie(list) = create chart pie with 100% calculation
 pylot.pie(list, labels=[text]) = each list labels text
@@ -67,6 +92,41 @@ pylot.pie(list, autopct='%.2f) = count percentage % each list
 pylot.pie(list, pctdistance=1) = positioning label
 pylot.legend(title="") = add title list data
 
----------- CANDLE GRAPH ----------
+---------- CANDLE PLOT ----------
 
-pylot.boxplot(list)
+pylot.boxplot(list) = create boxplot
+pylot.boxplot(labels=['']) = label for boxplot
+pylot.boxplot(showfliers=True) = show outlier
+pylot.boxplot(flierprops={ markerfacecolor: 'r' marker: 'd' }) = style outlier
+
+---------- VIOLIN PLOT ----------
+
+pylot.violinplot(list) = create violinplot
+pylot.violinplot(showmeans=False) = mean line
+pylot.violinplot(showmedians=True) = median line
+pylot.violinplot(quantiles=[]) = 25% | 50% | 75% lines
+
+---------- 3D PLOT ----------
+
+fig = pylot.figure() = create figure
+ax = pylot.axes(projection='3d') = create figure 3D
+ax.plot() = normal plot type
+ax.scatter() = scatter plot type
+
+ax.plot_wireframe() = wireframe 
+ax.plot_surface() = wireframe 
+
+---------- PLOT PANDAS ----------
+
+gca = pylot.gca() = combine 2 column in 1 plot
+
+dataframe.plot(kind='') = type of plot
+dataframe.plot(x='') = x data
+dataframe.plot(y='') = y data
+dataframe.plot(ax=gca') = combile between axes
+
+
+
+
+
+
