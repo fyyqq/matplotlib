@@ -77,10 +77,16 @@ pylot.barh(list, list) = create chart bar with transpose() method
 
 ---------- HIST PLOT ----------
 
+<<<<<<< HEAD
 pylot.hist(list) = histogram chart
 pylot.hist(list, bins=5) = 5 hist 
 pylot.hist(list, facecolor='red') = hist color 
 pylot.hist(list, alpha=0.5) = hist opacity 
+=======
+pylot.hist(list) = create histogram bar chart
+pylot.hist(list, bins=) = how many bar chart
+pylot.hist(list, cumulative=True) = 
+>>>>>>> 571cad57171b5ee3c724264b673a5a91c928efa9
 
 ---------- PIE PLOT ----------
 
@@ -130,3 +136,7 @@ dataframe.plot(ax=gca') = combile between axes
 
 
 
+<<<<<<< HEAD
+=======
+pylot.boxplot(list)
+>>>>>>> 571cad57171b5ee3c724264b673a5a91c928efa9
